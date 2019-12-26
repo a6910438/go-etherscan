@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2ebd337b-4c2c-4c32-a625-e005303b7af4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="deposit" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1VPRuh6HYeUHdK4SVq0Qvv8nBrT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../go-gocolly-master" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\etherscan-go\build" />
+      <recent name="D:\etherscan-go\utils" />
+      <recent name="D:\etherscan-go\log" />
+      <recent name="D:\" />
+      <recent name="D:\etherscan-go\cmd\app\config" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="go build etherscan-go/cmd/app" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="etherscan-go" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/cmd/app/main.go" />
+      <package value="etherscan-go/cmd/app" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build etherscan-go/cmd/app" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2ebd337b-4c2c-4c32-a625-e005303b7af4" name="Default Changelist" comment="" />
+      <created>1577152967921</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577152967921</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <proxy>https://goproxy.io</proxy>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="733" height="466" key="DebuggerActiveHint" timestamp="1577342049056">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="733" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1577342049056" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1577330797676">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577330797676" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1577324651474">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1577324651474" />
+    <state width="938" height="348" key="GridCell.Tab.0.bottom" timestamp="1577348023564">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1577348023564" />
+    <state width="938" height="348" key="GridCell.Tab.0.center" timestamp="1577348023564">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1577348023564" />
+    <state width="938" height="348" key="GridCell.Tab.0.left" timestamp="1577348023563">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1577348023563" />
+    <state width="938" height="348" key="GridCell.Tab.0.right" timestamp="1577348023564">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1577348023564" />
+    <state width="938" height="348" key="GridCell.Tab.1.bottom" timestamp="1577347959563">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1577347959563" />
+    <state width="938" height="348" key="GridCell.Tab.1.center" timestamp="1577347959563">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1577347959563" />
+    <state width="938" height="348" key="GridCell.Tab.1.left" timestamp="1577347959563">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1577347959563" />
+    <state width="938" height="348" key="GridCell.Tab.1.right" timestamp="1577347959563">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="938" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1577347959563" />
+    <state width="220" height="477" key="HiddenNamespacesPopup" timestamp="1577179761867">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1577179761867" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1577173594260">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1577173594260" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1577346101413">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1577346101413" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1577332804715">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577332804715" />
+    <state x="682" y="431" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1577154969604">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="682" y="431" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1577154969604" />
+  </component>
+</project>
