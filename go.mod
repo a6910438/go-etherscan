@@ -4,6 +4,8 @@ go 1.13
 
 require (
 	github.com/a6910438/go-logger v0.0.0-20191031041009-3779e17d0503
+	github.com/asdine/storm/v3 v3.1.0
+	github.com/boltdb/bolt v1.3.1
 	github.com/ethereum/go-ethereum v1.9.9
 	github.com/inconshreveable/log15 v0.0.0-20180818164646-67afb5ed74ec
 	github.com/jarcoal/httpmock v1.0.4 // indirect

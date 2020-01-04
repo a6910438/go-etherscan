@@ -2,18 +2,21 @@ package main
 
 import (
 	"etherscan-go/cmd/app/config"
+	transfer2 "etherscan-go/cmd/app/transfer"
 	"etherscan-go/cmd/app/watch"
+	"etherscan-go/database/bolt"
 	"etherscan-go/database/mysql"
-	"etherscan-go/database/sqlite"
 	"etherscan-go/log"
 	"flag"
 	"fmt"
 	"github.com/a6910438/go-logger"
+	"github.com/ethereum/go-ethereum/ethclient"
 	"github.com/judwhite/go-svc/svc"
 )
 
 type program struct {
-	watch *watch.Watcher //监听
+	watch    *watch.Watcher //监听
+	transfer *transfer2.Transfer
 }
 
 func (p *program) Init(env svc.Environment) error {
@@ -29,19 +32,28 @@ func (p *program) Init(env svc.Environment) error {
 		return err
 	}
 
-	sqlite, err := sqlite.NewSqlite("D:/etherscan-go/build/deposit.db")
+	bolt, err := bolt.NewBolt()
 	if err != nil {
-		logger.Errorf("init sqlite error: %v", err)
+		logger.Errorf("init boltdb error: %v", err)
 		return err
 	}
 
-	watch, err := watch.NewWatcher(mysql, sqlite, config.Cfg.Eth.Node)
+	watch, err := watch.NewWatcher(mysql, bolt, config.Cfg.Eth.Node)
 	if err != nil {
 		logger.Errorf("NewWatcher error: %v", err)
 		return err
 	}
 
+	client, err := ethclient.Dial(config.Cfg.Eth.Node)
+	if err != nil {
+		logger.Errorf("Dial error: %v", err)
+		return err
+	}
+
+	transfer, err := transfer2.NewTransfer(mysql, client)
+
 	p.watch = watch
+	p.transfer = transfer
 
 	logger.Info("program inited")
 	return nil
@@ -51,7 +63,9 @@ func (p *program) Start() error {
 
 	logger.Info("program start")
 
-	p.watch.Start()
+	go p.transfer.Start()
+	go p.watch.Start()
+
 	return nil
 }
 

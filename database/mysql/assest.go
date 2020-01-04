@@ -9,7 +9,7 @@ import (
 func (m *mysql) GetAssestByAddress(to string) (*types.UserAssest, error) {
 	var result types.UserAssest
 	err := m.db.Where("address = ?", to).First(&result).Error
-	return &result, handleErr(err, "coin")
+	return &result, handleErr(err, "assest")
 }
 
 func (m *mysql) UpdateAssestById(assest *types.UserAssest) (err error) {
@@ -26,4 +26,10 @@ func (m *mysql) UpdateAssestById(assest *types.UserAssest) (err error) {
 		return errors.WithMessage(err, "update assest")
 	}
 	return nil
+}
+
+func (m *mysql) GetAssests() ([]*types.UserAssest, error) {
+	var result []*types.UserAssest
+	err := m.db.Find(&result).Error
+	return result, handleErr(err, "assest")
 }

@@ -26,10 +26,15 @@ type (
 		Node string `yaml:"node" env:"NODE"`
 	}
 
+	Block struct {
+		Height int `yaml:"height" env:"HEIGHT"`
+	}
+
 	Configuration struct {
-		Log LogConfig `yaml:"log"`
-		Db  DbConfig  `yaml:"db"`
-		Eth Eth       `yaml:"eth"`
+		Log   LogConfig `yaml:"log"`
+		Db    DbConfig  `yaml:"db"`
+		Eth   Eth       `yaml:"eth"`
+		Block Block     `yaml:"block"`
 	}
 )
 
@@ -37,7 +42,7 @@ var Cfg Configuration
 
 func Init(filePath string) error {
 	fmt.Println(filePath)
-	err := configor.Load(&Cfg, "D:/etherscan-go/build/config.yaml")
+	err := configor.Load(&Cfg, filePath)
 	fmt.Printf("config: %#v\n", Cfg)
 	return err
 }

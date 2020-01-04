@@ -20,21 +20,21 @@ type dbBaser interface {
 	UpdateAssestById(assest *types.UserAssest) (err error)
 }
 
-type sqlite interface {
-	GetLastBlockHeight() (int, error)
-	UpdateBlockHeight(height int) (int, error)
+type bolt interface {
+	Select() (types.Block, error)
+	Update(block types.Block) error
 }
 
 type Watcher struct {
 	db   dbBaser
-	sql  sqlite
+	bolt bolt
 	node string
 }
 
-func NewWatcher(db dbBaser, sql sqlite, node string) (*Watcher, error) {
+func NewWatcher(db dbBaser, bolt bolt, node string) (*Watcher, error) {
 	return &Watcher{
 		db:   db,
-		sql:  sql,
+		bolt: bolt,
 		node: node,
 	}, nil
 }
@@ -42,19 +42,25 @@ func NewWatcher(db dbBaser, sql sqlite, node string) (*Watcher, error) {
 func (w *Watcher) Start() {
 	client := ethrpc.New(w.node)
 
-	height, err := w.sql.GetLastBlockHeight()
-	if err != nil {
-		logger.Errorf("Watcher Init Sqlite3 err", err)
-		return
-	}
-
 	for {
+		block, err := w.bolt.Select()
+		if err != nil {
+			logger.Errorf("Watcher Init Sqlite3 err", err)
+			return
+		}
+		height := block.Height
+
 		bestHeight, err := client.EthBlockNumber()
 		if err != nil {
 			logger.Errorf("Watcher EthBlockNumber err", err)
 			time.Sleep(5 * time.Second)
 			continue
 		}
+		if bestHeight == height {
+			time.Sleep(30 * time.Second)
+			continue
+		}
+
 		for i := height; i <= bestHeight; i++ {
 			count, err := client.EthGetBlockTransactionCountByNumber(i)
 			if err != nil {
@@ -93,10 +99,8 @@ func (w *Watcher) Start() {
 					to := "0x" + txRe.Logs[0].Topics[2][26:]
 					amount := decimal.NewFromBigInt(hexToBigInt(txRe.Logs[0].Data), 0).Div(decimal.NewFromBigInt(big.NewInt(params.Ether), 0))
 					fee := decimal.NewFromBigInt(big.NewInt(int64(txRe.GasUsed)).Mul(big.NewInt(int64(txRe.GasUsed)), &transaction.GasPrice), 0).Div(decimal.NewFromBigInt(big.NewInt(params.Ether), 0))
-					fmt.Print(fee)
 					assest, err := w.db.GetAssestByAddress(to)
 					if err != nil {
-						time.Sleep(5 * time.Second)
 						continue
 					}
 					assest.AvaBalance = assest.AvaBalance.Add(amount)
@@ -108,7 +112,7 @@ func (w *Watcher) Start() {
 				}
 			}
 			// 更新块高
-			w.sql.UpdateBlockHeight(i)
+			w.bolt.Update(types.Block{ID:1, Height:i})
 
 		}
 	}
